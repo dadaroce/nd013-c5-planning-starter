@@ -158,6 +158,7 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
       goal.velocity.x =  _speed_limit * std::cos(goal.rotation.yaw);
       goal.velocity.y =  _speed_limit * std::sin(goal.rotation.yaw);
       goal.velocity.z = 0;
+    }
 
   } else if (_active_maneuver == DECEL_TO_STOP) {
     // LOG(INFO) << "BP- IN DECEL_TO_STOP STATE";
